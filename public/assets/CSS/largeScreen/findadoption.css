@@ -1,0 +1,86 @@
+:root{
+    --bg-white:#FEFEFE;
+    --bg-trans-green: rgba(39, 168, 118, 0.3);
+    --primary-green:#27A876;
+    --fnt-blk:#0F0F0F;
+    --navbar-grey:#E3E3E3;
+}
+body {
+    background-color: var(--bg-white);
+ }
+
+#sidebar {
+    background-image: url(../../Images/bg03.png);
+    background-repeat: no-repeat;
+    background-size: 40vh;
+    background-position: bottom;
+    background-color: #F4F4F4;
+   
+            
+}
+
+.userIcon {
+    width: 35%;
+    margin-left: 7vw;
+
+}
+
+h3 {
+    text-align: center;
+   
+  }
+
+.card {
+    background-color: var(--bg-trans-green);
+    border-radius: 15px;
+    border-style: none;
+    
+   margin:2em 8em 2em 25em;
+   
+   
+}
+.card:hover {
+    background-color: var(--primary-green);
+    color: var(--bg-white);
+
+}
+.media-content{
+    display: flex;
+  
+    justify-content: left;
+}
+
+li{
+    list-style-type: none;
+    text-align: left;
+}
+
+.content ul{
+    margin-left: 0em;
+    margin-top:3em;
+}
+
+.image{
+    padding-left: 0.8em;
+    width: 80%;
+    
+}
+@media only screen and (max-width : 992px){
+    .content ul{
+        margin-top: 0em;
+       
+    }
+}
+@media only screen and (max-width : 768px){
+    .content ul{
+        margin-top: 0em;
+    }
+    .card{
+        margin:2em 4em;
+    }
+    .image{
+        padding-left: 0.8em;
+        width: 80%;
+        
+    }
+}

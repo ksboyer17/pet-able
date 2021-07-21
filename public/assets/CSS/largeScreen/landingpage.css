@@ -4,8 +4,6 @@
     --primary-green:#27A876;
     --fnt-blk:#0F0F0F;
     --navbar-grey:#E3E3E3;
-
-
 }
 body {
     background-color: var(--bg-white);
@@ -61,7 +59,12 @@ h2 {
     padding: 3vw 10vw 3vw 10vw;
     text-align: center;
 }
-
+.navbar {
+    background-color: var(--primary-green);
+}
+.title {
+    color: var(--bg-white);
+}
 
 @media only screen and (max-width : 768px){
     .landingPageCont{

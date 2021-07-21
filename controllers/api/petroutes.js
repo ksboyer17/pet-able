@@ -15,6 +15,36 @@ router.post('/', async (req, res) => {
     }
   });
 
+  router.get('/pet/:id', async (req,res) => {
+    try {
+        const petData = await Pet.findByPk(req.param.id, {
+            include: [
+                {
+                  model: Pet,
+                  attributes: ['name'],
+                },
+              ],
+            });
+        
+          } catch (err) {
+            res.status(500).json(err);
+          }
+        });
+        
+        // Use withAuth middleware to prevent access to route
+        router.get('/profile', withAuth, async (req, res) => {
+            try {
+                    // Find the logged in user based on the session ID
+    const petData = await Pet.findByPk(req.session.user_id, {
+        attributes: { exclude: ['password'] },
+        include: [{ model: Project }],
+      });
+  
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
 
   router.get('/pet', withAuth, async (req, res) => {
     try {
@@ -23,12 +53,6 @@ router.post('/', async (req, res) => {
         include: [{ model: Pet }],
       });
   
-      const pet = petData.get({ plain: true });
-  
-      res.render('profile', {
-        ...pet,
-        logged_in: true
-      });
     } catch (err) {
       res.status(500).json(err);
     }

@@ -1,8 +1,13 @@
-<div class="sidebar column is-one-fifth" style="display: none;" id="sidebar">
-    <img src="#">
-    <h3 class="title is-3">[User]</h3>
+<div class="sidebar column is-one-quarter" style="display: none;" id="sidebar">
+    <div class="userImg">
+          <img id="userImg" src="/assets/Images/user_icon-03.png">
+    </div>
+   
 
-    <a href="javascript:void(0)" class="closebtn" onclick="closeBar()">&times; close</a>
+
+    <h3 class="title is-3">{{user.name}}</h3>
+
+    <a href="javascript:void(0)" class="closebtn" onclick="closeBar()">&times;</a>
 
     <aside class="menu">
         <ul class="menu-list">
@@ -17,3 +22,5 @@
         </ul>
     </aside>
 </div>
+
+<script src="js/sidebar.js"></script>

@@ -1,0 +1,37 @@
+<div class="container">
+
+{{#each pets as |pet|}}
+
+<div class="card">
+    <div class="columns">
+        <div class="column">
+            <div class="card-image">
+                <figure class="image ">
+                {{!-- <figure class="image is-4by3"> --}}
+                    <img  src="/images/{{pet.filename}}" alt="Placeholder image">
+                </figure>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-content">
+                        <p class="title is-4">{{pet.name}}</p>
+                    </div>
+                </div>
+                    
+                <div class="content">
+                    <ul>
+                        <li><strong>Breed: </strong>{{pet.breed}}</li>
+                        <li><strong>Age: </strong>{{pet.age}} years</li>
+                        <li><strong>Size: </strong>{{pet.weight}} lbs</li>
+                        <li><strong>Disability: </strong>{{pet.disability}}</li>
+                        <li><strong>Location: </strong>{{pet.breed}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/each}}
+</div>
